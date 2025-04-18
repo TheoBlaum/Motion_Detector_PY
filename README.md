@@ -1,16 +1,16 @@
-# Détecteur de Mouvement et de Visages
+# Motion and Face Detector
 
-Ce programme est un système de détection de mouvement et de visages en temps réel utilisant la webcam. Il combine la détection de mouvement avec la reconnaissance faciale pour fournir une surveillance visuelle complète.
+This program is a real-time motion and face detection system using a webcam. It combines motion detection with facial recognition to provide comprehensive visual surveillance.
 
-## Fonctionnalités
+## Features
 
-- Détection de mouvement en temps réel
-- Détection de visages
-- Affichage des FPS (images par seconde)
-- Horodatage des images
-- Interface visuelle avec informations en temps réel
+- Real-time motion detection
+- Face detection
+- FPS (frames per second) display
+- Image timestamping
+- Real-time visual interface with information overlay
 
-## Prérequis
+## Prerequisites
 
 - Python 3.x
 - OpenCV (cv2)
@@ -18,50 +18,51 @@ Ce programme est un système de détection de mouvement et de visages en temps r
 
 ## Installation
 
-1. Assurez-vous d'avoir Python installé sur votre système
-2. Installez les dépendances nécessaires :
+1. Ensure Python is installed on your system
+2. Install the required dependencies:
 ```bash
 pip install opencv-python numpy
 ```
 
-## Utilisation
+## Usage
 
-1. Exécutez le programme :
+1. Run the program:
 ```bash
 python motion_detector.py
 ```
 
-2. Contrôles :
-- Appuyez sur 'q' pour quitter le programme
+2. Controls:
+- Press 'q' to quit the program
 
-## Affichage
+## Display
 
-Le programme affiche :
-- Le nombre de visages détectés
-- Les FPS en temps réel
-- La date et l'heure actuelles
-- Des rectangles bleus autour des visages détectés
-- Des rectangles verts autour des zones de mouvement
+The program shows:
+- Number of detected faces
+- Real-time FPS counter
+- Current date and time
+- Blue rectangles around detected faces
+- Green rectangles around motion areas
 
 ## Configuration
 
-Les paramètres suivants peuvent être ajustés dans le code :
-- `motion_threshold` : Seuil de détection de mouvement
-- `face_scale_factor` : Facteur d'échelle pour la détection de visages
-- `face_min_neighbors` : Nombre minimum de voisins pour la détection de visages
-- `face_min_size` : Taille minimale des visages
-- `blur_kernel` : Taille du noyau de flou
+The following parameters can be adjusted in the code:
+- `motion_threshold`: Motion detection threshold
+- `face_scale_factor`: Scale factor for face detection
+- `face_min_neighbors`: Minimum neighbors for face detection
+- `face_min_size`: Minimum face size
+- `blur_kernel`: Blur kernel size
 
-## Structure du Code
+## Code Structure
 
-Le programme utilise une architecture multi-thread pour :
-- Capture vidéo en continu
-- Traitement des images
-- Détection de mouvement et de visages
-- Affichage des résultats
+The program uses a multi-threaded architecture for:
+- Continuous video capture
+- Image processing
+- Motion and face detection
+- Results display
 
 ## Notes
 
-- Le programme essaie automatiquement différentes sources de caméra (0, 1, -1)
-- Les performances peuvent varier selon la puissance de votre ordinateur
-- La détection de visages utilise le classifieur Haar Cascade d'OpenCV 
+- The program automatically tries different camera sources (0, 1, -1)
+- Performance may vary depending on your computer's capabilities
+- Face detection uses OpenCV's Haar Cascade classifier
+- The camera feed is mirrored horizontally for a more natural viewing experience 
